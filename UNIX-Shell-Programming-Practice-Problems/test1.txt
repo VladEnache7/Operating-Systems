@@ -1,0 +1,43 @@
+Write a shell program that does the following:
+- Gets a directory from the keyboard
+- Gets N files (N is not defined) as parameters.
+- Checks whether the files exist in the given directory
+- For every file that exists, it will get the number of digits in the last ten lines.
+- If the file does not exist, print that it does not exist.
+- Validate all the given values (e.g. the directory exists etc.)
+
+Example:
+directory is /home/nicu/test
+files in the directory are a.txt abcd.txt b.txt c.txt
+a.txt contents are
+1112
+abcd
+2322
+a
+b
+c
+d
+e
+f
+g
+h
+
+
+abcd.txt contents are
+aaaaaa
+bbbbbb
+
+b.txt contents are
+123
+123
+
+c.txt contents are
+25
+
+The program will be called like this:
+./a.sh a.txt abcd.txt bcdef.txt c.txt
+/home/bdnicu/test
+a.txt:4
+abcd.txt:0
+bcdef.txt:does not exist
+c.txt:2

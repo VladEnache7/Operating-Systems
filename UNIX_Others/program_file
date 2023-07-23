@@ -1,0 +1,3 @@
+BEGIN {FS=":"}
+{chars += length + a; words += NF;} 
+END {print "File:"FILENAME, "Lines:" NR, "Words:" words, "Characters:" chars;}

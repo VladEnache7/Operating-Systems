@@ -1,0 +1,24 @@
+Write a shell program that does the following:
+- Gets as parameters N files (N is undefined) which correspond to scheduled appointments in some given days
+- Checks whether any appointments in the given files are duplicated (e.g. under the same name and in the same day, and at the same hour)
+- The format of the files is as follows (the day is just the day of the year):
+firstname;lastname;day;hour
+- For the given appointments which are repeated you need to add 1 to the hour (take into account the 24H format, e.g. 23+1 = 0 not 24). If you reached 00 on the next day you should also add 1 to the day and continue onwards.
+- Repeat the check until no appointments are duplicated.
+- After resolving the issues print the new schedules
+- Validate all the given values (e.g. file exists etc.)
+
+Example:
+a.txt contents:
+a;b;12;5
+a;b;12;6
+a;b;12;7
+
+b.txt contents:
+a;b;12;6
+
+./a.sh a.txt b.txt
+a;b;12;8
+a;b;12;6
+a;b;12;7
+a;b;12;5

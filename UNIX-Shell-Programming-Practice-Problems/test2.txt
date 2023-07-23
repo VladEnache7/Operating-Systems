@@ -1,0 +1,24 @@
+Write a shell program that does the following:
+- Gets as parameter a number N and a directory
+- Once every N seconds, it lists all files in the directory (! not the subdirectories !) and, if nothing changes in the directory structure then it prints "nothing changed"
+- If any file is created or removed, it will print accordingly the action taken on it.
+- Note that, under this folder, there is an important file named secret.txt. If this file is removed or changed, you should notify the action which was done on it and modify it back to the original form - so in the initialization step it would be wise to get a copy of this file!
+- perform all the validations on the given parameters (e.g. directory exists etc.)
+
+(Note: the file directory described should be created by yourself, as well as the secret.txt file - you should verify that your program works by working in two terminals - in the first one you run your program and in the second one you do the verifications)
+
+example:
+./a.sh 1 /home/nicu/test
+nothing changed
+nothing changed
+...
+/home/nicu/test/secret.txt changed - restoring
+nothing changed
+nothing changed
+/home/nicu/test/secret.txt removed - restoring
+nothing changed
+/home/nicu/test/a.txt created
+nothing changed
+/home/nicu/test/a.txt removed
+nothing changed
+...
